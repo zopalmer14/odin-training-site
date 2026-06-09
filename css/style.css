@@ -1,4 +1,36 @@
 
+/* CSS Style Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Variable Declaration */
 
 :root {
@@ -17,10 +49,20 @@ body {
   font-family: Roboto, sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; 
   font-family: Garamond, serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 a {
@@ -34,28 +76,52 @@ a:hover {
 }
 
 header, main, footer {
-  padding: 0 1rem;
+  padding: 1rem;
+  display: flex;
+}
+
+main, footer {
+  flex-direction: column;
+}
+
+header, footer {
+  width: 100%;
+  color: white;
+  align-items: center;
+}
+
+header a, footer a {
+  color: white;
+}
+
+header a:hover, footer a:hover {
+  color: var(--light-accent);
+  border-bottom-color: var(--light-accent);
 }
 
 /* Header Styling */
 
 header {
   background-color: var(--primary-accent);
-  color: white;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
 header a {
   font: bold 20px Garamond, serif;
-  color: white;
 }
 
-header a:hover {
-  color: var(--light-accent);
-  border-bottom-color: var(--light-accent);
+/* Main Styling */
+
+main {
+  max-width: 70ch;
+  line-height: 1.5rem;
 }
 
 /* Footer Styling */
+
+footer {
+  background-color: var(--secondary-accent);
+  justify-content: center;
+  gap: 0.25rem;
+}
 
