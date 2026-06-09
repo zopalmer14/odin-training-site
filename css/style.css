@@ -95,7 +95,7 @@ header a:hover, footer a:hover {
 header {
   background-color: var(--primary-accent);
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.5rem 3rem;
 }
 
 header h1 {
@@ -115,16 +115,22 @@ main {
   gap: 1.5rem;
 }
 
-main div {
+main div.split-div, main div.img-div, main div.list.div {
   display: flex;
+}
+
+main div.img-div, main div.list-div {
   flex-direction: column;
 }
 
-main div.list-div {
-
+main div.split-div {
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-main div#picture-div {
+main div.img-div {
   align-items: center;
   gap: 0.5rem;
 }
