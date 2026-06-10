@@ -109,10 +109,10 @@ header a {
 /* Main Styling */
 
 main {
-  max-width: 70ch;
+  max-width: 75ch;
   line-height: 1.5rem;
   padding: 3rem 0;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 main div.split-div, main div.img-div, main div.list.div {
@@ -124,10 +124,9 @@ main div.img-div, main div.list-div {
 }
 
 main div.split-div {
-  max-width: 100%;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 main div.img-div {
@@ -140,12 +139,25 @@ main div h2 {
   padding-bottom: 0.5rem;
 }
 
+main div h2.location-h2 {
+  padding-bottom: 1rem;
+}
+
+main div h3 {
+  font-size: 20px;
+  padding: 0.25rem 0;
+}
+
 main div p, main div ol, main div ul {
   padding: 0.25rem 0;
 }
 
 main div ol, main div ul {
   padding-left: 2rem;
+}
+
+main div ul.activity-list {
+  padding-bottom: 2rem;
 }
 
 /* Footer Styling */
