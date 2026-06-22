@@ -27,10 +27,6 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 /* Variable Declaration */
 
 :root {
@@ -42,6 +38,18 @@ time, mark, audio, video {
 }
 
 /* Base Styling */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
 
 body {
   margin: 0;
@@ -59,35 +67,31 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
+  border-bottom: solid 1px transparent;
   transition: all 0.3s ease;
 }
 
 a:hover {
   color: var(--primary-accent);
-  border-bottom: solid 1px var(--primary-accent);
+  border-bottom-color: var(--primary-accent);
 }
 
-header, main, footer {
-  display: flex;
-}
-
-main, footer {
-  flex-direction: column;
-}
-
-header, footer {
+header, 
+footer {
   width: 100%;
   color: white;
   align-items: center;
 }
 
-header a, footer a {
+header a, 
+footer a {
   color: white;
 }
 
-header a:hover, footer a:hover {
+header a:hover, 
+footer a:hover {
   color: var(--light-accent);
-  border-bottom-color: var(--light-accent);
+  border-bottom-color: transparent;
 }
 
 /* Header Styling */
@@ -115,21 +119,13 @@ main {
   gap: 2rem;
 }
 
-main div.split-div, main div.img-div, main div.list.div {
-  display: flex;
-}
-
-main div.img-div, main div.list-div {
-  flex-direction: column;
-}
-
-main div.split-div {
+main div.split {
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
 }
 
-main div.img-div {
+main div.img {
   align-items: center;
   gap: 0.5rem;
 }
@@ -139,7 +135,7 @@ main div h2 {
   padding-bottom: 0.5rem;
 }
 
-main div h2.location-h2 {
+main div h2.extra-padding {
   padding-bottom: 1rem;
 }
 
@@ -148,11 +144,14 @@ main div h3 {
   padding: 0.25rem 0;
 }
 
-main div p, main div ol, main div ul {
+main div p, 
+main div ol, 
+main div ul {
   padding: 0.25rem 0;
 }
 
-main div ol, main div ul {
+main div ol,
+main div ul {
   padding-left: 2rem;
 }
 
