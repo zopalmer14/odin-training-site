@@ -168,3 +168,8 @@ footer {
   gap: 0.25rem;
 }
 
+footer img {
+  vertical-align: bottom;
+  margin-left: 0.25rem;
+}
+
