@@ -19,48 +19,157 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* Variable Declaration */
 
 :root {
-    --white-accent: white;
-    --gray-accent: whitesmoke;
+  --light-accent: #a9aeb1;
+  --gray-accent: #71767a;
+  --dark-accent: #1b1b1b;
+  --primary-accent: #005ea2;
+  --secondary-accent: #d83933;
 }
 
 /* Base Styling */
 
-body {
-    font-size: 16px;
-    font-family: Garamond, sans-serif;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; 
+  font-family: Garamond, serif;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: solid 1px transparent;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-accent);
+  border-bottom-color: var(--primary-accent);
+}
+
+header, 
+footer {
+  width: 100%;
+  color: white;
+  align-items: center;
+}
+
+header a, 
+footer a {
+  color: white;
+}
+
+header a:hover, 
+footer a:hover {
+  color: var(--light-accent);
+  border-bottom-color: transparent;
+}
+
+/* Header Styling */
+
+header {
+  background-color: var(--primary-accent);
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+header a {
+  font: bold 20px Garamond, serif;
+}
+
+/* Main Styling */
+
+main {
+  max-width: 75ch;
+  line-height: 1.5rem;
+  padding: 3rem 0;
+  gap: 2rem;
+}
+
+main div.split {
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+main div.img {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+main div h2 {
+  font-size: 24px;
+  padding-bottom: 0.5rem;
+}
+
+main div h2.extra-padding {
+  padding-bottom: 1rem;
+}
+
+main div h3 {
+  font-size: 20px;
+  padding: 0.25rem 0;
+}
+
+main div p, 
+main div ol, 
+main div ul {
+  padding: 0.25rem 0;
+}
+
+main div ol,
+main div ul {
+  padding-left: 2rem;
+}
+
+main div ul.activity-list {
+  padding-bottom: 2rem;
+}
+
+/* Footer Styling */
+
+footer {
+  background-color: var(--secondary-accent);
+  justify-content: center;
+  padding: 2rem;
+  gap: 0.25rem;
+}
+
+footer img {
+  vertical-align: bottom;
+  margin-left: 0.25rem;
+}
+
